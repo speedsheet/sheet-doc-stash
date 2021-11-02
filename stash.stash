@@ -1,0 +1,1065 @@
+# <#>Stash Document<> SpeedSheet
+<b>What you need, faster.<>
+
+Covers the format syntax for Stash documents (the underlying document for all SpeedSheets).
+
+
+# Text Markup Summary
+
+<table><col>Escape<>	<col><c>\\<><><col><>
+<col> <>				<col><c>\\<v>x<><><>
+<col> <>
+<col>Heading 1<>		<col><c># <v>heading...<><><>
+<col>Heading 2<>		<col><c>## <v>heading...<><><>
+<col>Heading 3<>		<col><c>### <v>heading...<><><>
+<col>	<>
+<col>Bold<>				<col><c>\<b><v>...<>\<><><>	<col><c>\<bold><v>...<>\<><><>
+<col>Italic<>			<col><c>\<i><v>...<>\<><><>	<col><c>\<italic><v>...<>\<><><>
+<col>Soft<>				<col><c>\<s><v>...<>\<><><>	<col><c>\<soft><v>...<>\<><><>
+<col>Strikethrough<>	<col><c>\<-><v>...<>\<><><>	<col><c>\<strike><v>...<>\<><><>
+<col>Underline<>		<col><c>\<_><v>...<>\<><><>	<col><c>\<underline><v>...<>\<><><>
+<col> <>
+<col>Small<>			<col> <>						<col><c>\<small><v>...<>\<><><>
+<col>Subscript<>		<col><c>\<sub><v>...<>\<><><>	<col><c>\<subscript><v>...<>\<><><>
+<col>Superscript<>		<col><c>\<super><v>...<>\<><><>	<col><c>\<superscript><v>...<>\<><><>
+<col>Comment<>			<col><c>\<#><v>...<>\<><><>		<col><c>\<comment><v>...<>\<><><>
+<col>Code<>				<col><c>\<c><v>...<>\<><><>		<col><c>\<code><v>...<>\<><><>
+<col>Important<>		<col><c>\<!><v>...<>\<><><>		<col><c>\<important><v>...<>\<><><>
+<col>Mark<>				<col><c>\<m><v>...<>\<><><>		<col><c>\<mark><v>...<>\<><><>
+<col>Variable<>			<col><c>\<v><v>...<>\<><><>		<col><c>\<variable><v>...<>\<><><>
+<col> <>
+<col>Text Color<>		<col> <>						<col><c>\<<v>color_name<>><v>...<>\<><><>
+<col> <>
+<col>Bullets<>			<col><c>\<*><v>...<>\<><><>		<col><c>\<bullet><v>...<>\<><><>
+<col> <>
+<col>Tag<>				<col><c>\<@><v>...<>\<><><>		<col><c>\<tag><v>...<>\<><><>
+<col>Tag Line<>			<col><c>@ <v>...<><><>
+<col> <>
+<col>Link<>				<col><c>\<l><v><v>url<><>\<><><>		<col><c>\<link><v><v>url<><>\<><><>
+<col> <>				<col><c>\<l <v>url<>><v>...<>\<><><>	<col><c>\<link <v>url<>><v>...<>\<><><>
+<col> <>				<col><c>\<l "<v>url<>"><v>...<>\<><><>	<col><c>\<link "<v>url<>"><v>...<>\<><><>
+<col>			<><col>				<><col> <><>
+<table><col>Image<>			<col><c>\<image <v>image_file_location<>><><>
+<col> <>				<col><c>\<image "<v>image_file_location<>"><><>
+<col> <>
+<col>Html<>				<col><c>\<h><v>html_tag<>\</h><v>...<>\<h><v>/html_tag<>\</h><><>
+<col> <>
+<col>Card:<>			<col><c>\<card><v>...<>\<><><>
+<col> <>
+<col>Code Box:<>		<col><c>\<cb><v>...<>\<><><>
+<col> <>				<col><c>\<codebox><v>...<>\<><><>
+<col> <>
+<col>Table:<>			<col><c>\<table>\<col><v>...<>\<>\<col><v>...<>\<>\<><><>
+<col>			<><col>				<><>
+
+
+# Getting Started
+
+
+
+## Sample / Hello World
+
+
+### Hello World - Simplest Version
+
+The simplest stash document you can have:
+
+
+<cb><b>\# Hello World<>
+Hello world!<>
+
+Defining A Section:
+
+The <c>#<> in the first line lets stash know this is a new section.
+The text after the <>#<#> is the section heading.
+
+
+
+### Hello World - A Bit Bigger
+
+In this example, hello world has 2 sections.
+
+<cb><b>\# Hello World<>
+Hello World!
+
+<b>## Inner Section<>
+Inside the 'Hello World' section.<>
+
+Inner Sections:
+
+In this example, Inner Section is under the 'Hello World'.
+Searching for 'Hello World' will also show the inner section too.
+
+
+
+## Tips
+
+
+
+#### Consolidate Documents
+
+Combine related documents into one Stash document.
+
+You'll need fewer documents.
+You'll want more of your information in one place.
+Stash search will bring you directly to what you want.
+
+You may have split your information into multiple documents. You probably did this to allow you to more easily find items, or to organize them. As you use Stash, you'll find the search feature makes it easy to find or even categorize your information. In the former, you'll want as much information inside stash so you aren't hunting across documents. In the later case, Stash's filtering will allow you to easily find and work within a category.
+
+
+
+#### Small Sections
+
+Break your information into more and smaller sections.
+
+Dividing your data into smaller sections inside Stash allows you to zero in on a particular item much faster an easier.
+
+
+
+#### Build Over Time
+
+Don't try to get it all done at once. Build up your Stash documents over time.
+
+It can be daunting to create a Stash document knowing how much time it would take or how much you'll need to put into it. But it is much easier to add in what is important now and add the rest as you go along. You'll be surprised at how quickly your Stash document grows and how useful it will become over time.
+
+
+
+# File Format - Basics
+@
+@ sample format, examples
+
+
+
+### Basics
+
+<b>Bold<>
+<i>Italic<>
+<s>Soft<>
+<->Strikethrough<>
+<_>Underline<>
+
+<small>Small<>
+<sub>Subscript<>
+<super>Superscript<>
+
+<#>Comment<>
+<!>Important<>
+<v>Variable<>
+<c>Code<>
+<m>Marked<>
+
+<*>Bullet
+Bullet<>
+
+A link: <l>http://www.thinkgo.io<>
+A labeled link: <l http://www.thinkgo.io>ThinkGo<>
+
+<card>Card<>
+
+<cb>Code Box<>
+
+<table><col>Table Column 1<><col>Table Column 2<>
+<col>Column 1<><col>Column 2<><>
+
+This is a <@>tagged word<>
+
+@ This is a tagged line.
+
+<image "Grand Canyon.jpg">
+
+
+
+### ### Basics With Markup Visible
+
+\<b><b>Bold<>\<>
+\<i><i>Italic<>\<>
+\<s><s>Soft<>\<>
+\<-><->Strikethrough<>\<>
+\<_><_>Underline<>\<>
+
+\<small><small>Small<>\<>
+\<sub><sub>Subscript<>\<>
+\<super><super>Superscript<>\<>
+
+\<#><#>Comment<>\<>
+\<!><!>Important<>\<>
+\<v><v>Variable<>\<>
+\<c><c>Code<>\<>
+\<m><mark>Marked<>\<>
+
+\<*><*>Bullet
+Bullet<>\<>
+
+A link: \<l><l>http://www.thinkgo.io<>\<>
+A labeled link:\<l http://www.thinkgo.io><l http://www.thinkgo.io>ThinkGo<>\<>
+
+\<card><card>Card<>
+\<>
+
+\<cb><cb>Code Box<>
+\<>
+
+\<table><table><col>\<col>Table Column 1\<><><col>\<col>Table Column 2\<><>
+<col>\<col>Column 1\<><><col>\<col>Column 2\<>\<><><>
+
+This is a \<@><@>tagged word<>\<>
+
+@ @ This is a tagged line.
+
+\<image "Grand Canyon.jpg"<image "Grand Canyon.jpg">>
+
+
+
+### ### Basics With Long Form Markup Visible
+
+\<bold><bold>Bold<>\<>
+\<italic><italic>Italic<>\<>
+\<soft><soft>Soft<>\<>
+\<strike><strike>Strikethrough<>\<>
+\<underline><underline>Underline<>\<>
+
+\<small><small>In Small<>\<>
+\<subscript><subscript>In Subscript<>\<>
+\<superscript><superscript>In Superscript<>\<>
+
+\<comment><comment>Comment<>\<>
+\<important><important>Important<>\<>
+\<variable><variable>Variable<>\<>
+\<code><code>Code<>\<>
+\<mark><mark>Marked<>\<>
+
+\<bullet><bullet>Bullet
+Bullet<>\<>
+
+A link: \<link><link>http://www.thinkgo.io<>\<>
+A labeled link:\<link http://www.thinkgo.io><link http://www.thinkgo.io>ThinkGo<>\<>
+
+\<card><card>Card<>
+\<>
+
+\<codebox><codebox>Code Box<>
+\<>
+
+\<table><table><column>\<column>Table Column 1\<><><column>\<column>Table Column 2\<><>
+<column>\<column>Column 1\<><><column>\<column>Column 2\<>\<><><>
+
+This is a \<tag><tag>tagged word<>\<>
+
+@ @ This is a tagged line.
+
+\<image "Grand Canyon.jpg"<image "Grand Canyon.jpg">>
+
+
+
+# Elements
+
+
+
+### Diamond Terminator \<>
+
+Elements that span over a section must be terminated with the diamond terimator '\<>'.
+
+
+Example:
+
+<cb>\<code>Terminated with diamond termitator\<><>
+
+
+
+### Bullets
+
+<cb>\<bullet><v>...<>
+<v>...<>\<><>
+
+<cb>\<*><v>...<>
+<v>...<>\<><>
+
+Bullets a list of items. Each newline starts a new bullet.
+
+
+Example:
+
+<cb><c>\<bullet><>Item 1
+Item 2
+Item 3\<><>
+
+Displays:
+
+<cb><bullet>Item 1
+Item 2
+Item 3<><>
+
+
+
+### Card
+
+<cb><c>\<card><v>...<>\<><><>
+
+Displays the content on a card (box).
+
+
+Example:
+
+<cb>\<card>This is in a card.\<><>
+
+Displays (the outlining box):
+
+<card>This is in a card.<>
+@
+@ \<card>
+
+
+
+### Code Box
+
+<cb><c>\<codebox><v>...<>\<><>
+<c>\<cb><v>...<>\<><><>
+
+Displays a box for showing code.
+The font is fixed width.
+
+
+Example:
+
+<cb>\<cb>This is in a codebox.\<><>
+
+Displays:
+
+<cb>This is in a codebox.<>
+@
+@ \<codebox>, \<cb>
+
+
+
+### Font - Bold
+
+<cb><c>\<bold><v>...<>\<><>
+<c>\<b><v>...<>\<><><>
+
+Formats text in bold.
+
+
+Example:
+
+<cb>In \<b>bold\<><>
+
+Displays:
+
+<card>In <b>bold<><>
+@
+@ formatting, text
+@ \<bold>, \<b>, \<strong>
+
+
+
+### Font - Italic
+
+<cb><c>\<italic><v>...<>\<><>
+<c>\<i><v>...<>\<><><>
+
+
+Example:
+
+<cb>In \<i>italic\<><>
+
+Displays:
+
+<card>In <i>italic<><>
+@
+@ formatting, text
+@ \<italic>, \<i>
+
+
+
+### Font - Small
+
+<cb><c>\<small><v>...<>\<><><>
+
+
+Example:
+
+<cb>\<small>Small\<> Style<>
+
+Displays:
+
+<card><small>Small<> Style<>
+@
+@ formatting, text
+@ \<small>
+
+
+
+### Font - Strikethrough
+
+<cb>\<-><v>...<>\<>
+\<strike><v>...<>\<><>
+
+
+Example:
+
+<cb>With \<->Strikethrough\<> Style<>
+
+Displays:
+
+<card>With <->Strikethrough<> Style<>
+@
+@ formatting, text, strikethrough
+@ \<->, \<strike>, \<strikethrough>, \<del>
+
+
+
+### Font - Subscript
+
+<cb>\<sub><v>...<>\<>
+\<subscript><v>...<>\<><>
+
+
+Example:
+
+<cb>With \<sub>Subscript\<> Style<>
+
+Displays:
+
+<card>With <sub>Subscript<> Style<>
+@
+@ formatting, text
+@ \<subscript>, \<sub>
+
+
+
+### Font - Superscript
+
+<cb>\<super><v>...<>\<>
+\<superscript><v>...<>\<><>
+
+
+Example:
+
+<cb>With \<super>Superscript\<> Style<>
+
+Displays:
+
+<card>With <super>Superscript<> Style<>
+@
+@ formatting, text
+@ \<superscript>, \<super>, \<sup>
+
+
+
+### Font - Underline
+
+<cb>\<_><v>...<>\<>
+\<underline><v>...<>\<><>
+
+
+Example:
+
+<cb>With \<_>Underline\<> Style<>
+
+Displays:
+
+<card>With <_>Underline<> Style<>
+@
+@ formatting, text, strikethrough
+@ \<_>, \<u>, \<underline>, \<ins>
+
+
+
+### Image
+
+<cb><c>\<image <v>location<>><><>
+
+Displays an image.
+Do not use a diamond terminator.
+
+
+Example:
+
+<cb>This is the Grand Canyon
+\<image "Grand Canyon.jpg"><>
+
+Displays:
+
+<card>This is the Grand Canyon
+<image "Grand Canyon.jpg"><>
+@
+@ \<image>, \<img>
+
+
+
+### Indent
+
+<cb><c>\<indent><v>...<>\<><><>
+
+Indents a section.
+
+
+Example:
+
+<cb><indent>\<indent>This is in a codebox.\<><><>
+
+Displays:
+
+<cb><indent>This is in a codebox.<><>
+@
+@ \<indent>
+
+
+
+### Indent - Half Indent
+
+<cb><c>\<indent-half><v>...<>\<><><>
+
+Indents a section by a half indent.
+
+
+Example:
+
+<cb><indent-half>\<indent-half>This is in a codebox.\<><><>
+
+Displays:
+
+<cb><indent-half>This is in a codebox.<><>
+@
+@ \<indent-half>
+
+
+
+### Text Color
+
+<cb><c>\<<v>color<>><v>...<>\<><><>
+
+
+Use standard web color names in lower case.
+
+
+Web Colors:
+<l>https://en.wikipedia.org/wiki/Web_colors<>
+
+
+Example:
+
+<cb>\<blue><blue>This is in blue.<>\<><>
+
+<cb>\<mediumslateblue><mediumslateblue>This is in medium slate blue.<>\<><>
+
+
+
+### Text Style - Code
+
+<cb><c>\<code><v>...<>\<><>
+<c>\<c><v>...<>\<><><>
+
+Fomrats text in fixed width format.
+
+
+Example:
+
+<cb>In \<c>code\<><>
+
+Displays:
+
+<card>In <c>code<><>
+@
+@ formatting, fixed width, fixed-width
+@ \<code>, \<c>
+
+
+
+### Text Style - Comment
+
+<cb><c>\<comment><v>...<>\<><>
+<c>\<#><v>...<>\<><><>
+
+Colors text green to denote a comment.
+Used primarily in code samples.
+
+
+Example:
+
+<cb>\<soft>soft\<> Style<>
+
+Displays:
+
+<card><soft>soft<> Style<>
+@
+@ formatting
+@ \<comment>, \<#>
+
+
+
+### Text Style - Important
+
+<cb><c>\<important><v>...<>\<><>
+<c>\<!><v>...<>\<><><>
+
+Colors text red to make it stand out.
+
+
+Example:
+
+<cb>\<soft>soft\<> Style<>
+
+Displays:
+
+<card><soft>soft<> Style<>
+@
+@ formatting
+@ \<important>, \<!>
+
+
+
+### Text Style - Mark
+
+<cb>\<mark><v>...<>\<>
+\<m><v>...<>\<><>
+
+
+Example:
+
+<cb>\<mark>Mark\<> Style<>
+
+Displays:
+
+<card><mark>Mark<> Style<>
+@
+@ formatting, text
+@ \<mark>, \<m>
+
+
+
+### Text Style - Soft
+
+<cb>\<soft><v>...<>\<>
+\<s><v>...<>\<><>
+
+
+Example:
+
+<cb>\<soft>soft\<> Style<>
+
+Displays:
+
+<card><soft>soft<> Style<>
+@
+@ formatting, text
+@ \<soft>, \<s>
+
+
+
+### Text Style - Variable
+
+<cb><c>\<variable><v>...<>\<><>
+<c>\<v><v>...<>\<><><>
+
+Colors the text to make it stand out.
+Use for variables or user changeable values.
+
+
+Example:
+
+<cb>\<v>Variable\<> Style<>
+
+Displays:
+
+<card><v>Variable<> Style<>
+@
+@ formatting
+@ \<variable>, \<v>
+
+
+
+### Table
+
+<cb>\<table>
+	\<column><v>...<>\<>\<column><v>...<>\<>
+	<v>...<>
+\<><>
+
+<cb>\<table>
+	\<col><v>...<>\<>\<col><v>...<>\<>
+	<v>...<>
+\<><>
+
+
+Creates a table with related columns equal in size.
+Rows are implicit. Each row is separated by a newline.
+
+
+Example:
+
+<cb>\<table>\<col><v>Column 1.1<>\<>\<col><v>Column 1.2<>\<>
+\<col><v>Column 2.1<>\<>\<col><v>Column 2.2<>\<>\<>
+<>
+
+Displays:
+
+<cb><table><col>Column 1.1<><col>Column 1.2<>
+<col>Column 2.1<><col>Column 2.2<><><>
+@ \<table>, \<row>, \<col>, \<column>, row, column
+
+
+
+### Tag
+
+<cb><c>\<tag><v>...<>\<><>
+<c>\<@><v>...<>\<><><>
+@
+@ \<tag>, \<@>
+
+
+
+### Tag Line
+
+<cb><c>@ <v>...<><><>
+
+Defines words to match in a search but are not in the section.
+@
+@ \@
+
+
+
+### Title / Heading
+
+<cb><c># <v>...<>\<><>
+<c>## <v>...<>\<><>
+<c>### <v>...<>\<><>
+<v>...<><>
+
+
+Defines a section and the header for that section.
+Headings are hierarcical.
+The number of <c>#<> indicates the heading level in the hierarchy.
+@
+@ #, ######
+
+
+
+### Url Link
+
+Long Form:
+
+<cb>\<link><v>url<>\<>
+
+\<link <v>url<>><v>label<>\<>
+
+\<link "<v>url<>>"<v>label<>\<><>
+
+Short Form:
+
+<cb>\<l><v>url<>\<>
+
+\<l <v>url<>><v>label<>\<>
+
+\<l "<v>url<>>"<v>label<>\<><>
+
+
+Example:
+
+<cb>\<l><l><v>https://speedsheet.io/s/stash<><>\<><>
+
+<cb>\<link><l><v>https://speedsheet.io/s/stash<><>\<><>
+
+<cb>\<link "<v>https://speedsheet.io/s/stash<>"><l "https://speedsheet.io/s/stash"><v>Stash SpeedSheet<><>\<><>
+@
+@ Create, Web, Links, URLs
+@ \<link>, \<l>
+
+
+
+# How To
+
+
+
+### Add Custom Html
+
+<c>\<h><v>html_tag<>\</h><v>...<>\<h>/<v>html_tag<>\</h><>
+
+Escape '\<' with '\<h>', and '>' with '\<\\h>'.
+
+So				<c>\<<v>tag<>><v>...<>\<<v>/tag<>><>
+becomes		<c>\<h><v>tag<>\</h><v>...<>\<h>/<v>tag<>\</h><>
+
+
+e.g.				Browser		<h>b</h>Bold Text<h>/b</h>
+				Html		<c>\<b>Bold Text\</b><>
+				Stash Text	<c>\<h>b\</h>Bold Text\<h>/b\</h><>
+
+@ Element
+
+
+
+### Add Important Style
+
+<c>\<!><!><v>Styled Important<><>\<><>
+<c>\<important><important><v>Styled Important<><>\<><>
+
+@ Format
+
+
+
+### Enter a Command
+
+Go to the search bar.
+Enter <c>:<v>command<><>
+
+
+
+### Create a Tagline
+
+<c>@ <v>Tagged Line<><>
+
+Tags all the words after '@' as searchable terms.
+
+Example:
+For a section named 'add a tag', add tag words 'create', 'insert'
+
+	@ create, insert
+
+@ Add a Tagged Line
+
+
+
+### Tag A Word
+
+<c>\<@><@><v>Tagged Word<><>\<><>
+<c>\<tag><tag><v>Tagged Word<><>\<><>
+
+@ Create, Add
+
+
+
+# Stash App
+
+
+
+## Stash - Using
+
+
+### Enter A Command
+
+Go to the search bar.
+Enter <c>:<v>command<><>
+
+All commands start with the character "<c>:<>"
+@
+@ entering
+
+
+
+## App Shortcuts
+
+
+### Shortcut - Clear Search
+
+<cb>Escape<>
+
+
+
+### Shortcut - Help
+
+<cb>F1<>
+
+
+
+### Shortcut - Edit
+
+<cb>F4<>
+
+<cb>CTRL + E  /  ⌘ + E<>
+
+
+
+### Shortcut - Reload
+
+<cb>F5<>
+
+<cb>CTRL + R  /  ⌘ + R<>
+		
+
+
+## App Commands
+
+
+### Command Summary
+
+About			<c>:a<>
+				<c>:about<>
+
+Help			<c>:h<>
+				<c>:help<>
+
+Edit				<c>:e<>
+				<c>:edit<>
+
+Reload			<c>:r<>
+				<c>:reload<>
+
+Change Index		<c>:i a | t<>
+				<c>:index all | tags<>
+
+
+
+### Command Details
+
+
+#### Command - About
+
+Show the about window.
+
+<c>:a<>							<#>Short Form<>
+<c>:about<>						<#>Full Form<>
+
+
+
+#### Command - Help
+
+Show the help window.
+
+<c>:h<>							<#>Short Form<>
+<c>:help<>						<#>Full Form<>
+
+
+
+#### Command - Edit
+
+Edit the current stash document in a text editor.
+
+<c>:e<>							<#>Short Form<>
+<c>:edit<>						<#>Full Form<>
+
+
+
+#### Command - Index - Change
+
+Change the search index.
+
+<c>:a <v>type<><>						<#>Short Form<>
+<c>:index <v>type<><>					<#>Full Form<>
+
+Types: <c>all<>, <c>tags<>
+
+
+
+#### Command - Index All Words
+
+Change the search index to search all words.
+
+<c>:i a<>						<#>Short Form<>
+<c>:index all<>					<#>Full Form<>
+
+
+
+#### Command - Index Tags And Titles Only
+
+Change the search index to search tags and titles only.
+
+<c>:i t<>						<#>Short Form<>
+<c>:index tags<>					<#>Full Form<>
+
+
+
+#### Command - Reload
+
+Reload the stash document. Useful if you've just edited the document.
+
+<c>:r<>							<#>Short Form<>
+<c>:reload<>						<#>Full Form<>
+
+@ Refresh
+
+
+
+#### Command - Write
+
+Write the stash document as HTML.
+
+<c>:w<>							<#>Short Form<>
+<c>:write<>						<#>Full Form<>
+
+@ :write, :w
+
+
+
+#### Command - Write Headings
+
+Write the stash headings to a text file.
+
+<c>:wh<>							<#>Short Form<>
+<c>:write-headings<>				<#>Full Form<>
+
+@ :wh, :write-headings
+
+
+
+# Terms
+
+
+
+#### Edit
+Command - edit the underlying stash file. Opens in a text editor.
+
+
+
+#### Gorilla
+Here is a gorilla  🦍
+
+
+
+#### Heading
+The heading of a section.
+Haedings are defined by having one or more '#' at the start of the line. The more '#', the more the line is indented.
+Headings define the starting point of a section.
+
+
+
+#### Indexer
+The indexer is the component that finds and indexes all the searchable words in a stash document.
+The indexer has two flavours... index all words, or index 'tags And title'.
+
+
+
+#### Indexer - All
+In this form, the indexer indexes all words in a stash document. Any word can be searched from the search bar.
+
+
+
+#### Indexer - Tags And Title
+This indexer indexes only words in the headings, tags and tag lines. Only those words will result in search hits.
+
+
+
+#### Reload
+Command - reload the current stash document. This is useful if you are editing the document and want to see the latest results.
+
+@ Refresh
+
+
+
+#### Search
+Search by entering text in the search bar (top of stash).
+Search displays all sections that match the words entered in the search bar.
+
+
+
+#### Section
+A section is the heading and the text following that heading.
+
+This defines the searchable unit in a stash document. Stash will index each section and return those sections that match the search criteria.
+
+
+
+#### Tag
+A searchable term.
+
+It is defined as the words between the '<@>' and '<> elements. This tells stash to always include these words as searchable.
+
+
+
+#### Tagline
+A line of searchable terms. Use this for terms related to the section but are not part of the text.
+
+It is defined as having a '@' at the beginning of the line. The words on this line will always be included as searchable terms.
+
+
+
