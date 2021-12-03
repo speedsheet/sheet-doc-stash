@@ -506,22 +506,41 @@ Displays:
 
 
 
-### Indent - Half Indent
+### Indent - Indent x2
 
 <cb><c>\<indent-half><v>...<>\<><><>
 
-Indents a section by a half indent.
+Indents a section by 2.
 
 
 Example:
 
-<cb><indent-half>\<indent-half>This is in a codebox.\<><><>
+<cb><indent-2>\<indent-2>This is in a codebox.\<><><>
 
 Displays:
 
-<cb><indent-half>This is in a codebox.<><>
+<cb><indent-2>This is in a codebox.<><>
 @
-@ \<indent-half>
+@ \<indent-2>, 2
+
+
+
+### Indent - Indent x4
+
+<cb><c>\<indent-half><v>...<>\<><><>
+
+Indents a section by 4.
+
+
+Example:
+
+<cb><indent-4>\<indent-4>This is in a codebox.\<><><>
+
+Displays:
+
+<cb><indent-4>This is in a codebox.<><>
+@
+@ \<indent-4>, 4
 
 
 
