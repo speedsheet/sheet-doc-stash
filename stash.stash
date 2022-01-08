@@ -32,25 +32,35 @@ Covers the format syntax for Stash documents (the underlying document for all Sp
 <col> <>
 <col>Bullets<>			<col><c>\<*><v>...<>\<><><>		<col><c>\<bullet><v>...<>\<><><>
 <col> <>
+<col>Indent<>			<col><c>\<in><v>...<>\<><><>		<col><c>\<indent><v>...<>\<><><>
+<col>Indent 2<>			<col><c>\<in-2><v>...<>\<><><>		<col><c>\<indent-2><v>...<>\<><><>
+<col>Indent 4<>			<col><c>\<in-4><v>...<>\<><><>		<col><c>\<indent-4><v>...<>\<><><>
+<col> <>
 <col>Tag<>				<col><c>\<@><v>...<>\<><><>		<col><c>\<tag><v>...<>\<><><>
 <col>Tag Line<>			<col><c>@ <v>...<><><>
 <col> <>
 <col>Link<>				<col><c>\<l><v><v>url<><>\<><><>		<col><c>\<link><v><v>url<><>\<><><>
 <col> <>				<col><c>\<l <v>url<>><v>...<>\<><><>	<col><c>\<link <v>url<>><v>...<>\<><><>
 <col> <>				<col><c>\<l "<v>url<>"><v>...<>\<><><>	<col><c>\<link "<v>url<>"><v>...<>\<><><>
-<col>			<><col>				<><col> <><>
-<table><col>Image<>			<col><c>\<image <v>image_file_location<>><><>
+<col>			<>		<col>				<><col> <><>
+<table><col>Image<>		<col><c>\<image <v>image_file_location<>><><>
 <col> <>				<col><c>\<image "<v>image_file_location<>"><><>
 <col> <>
 <col>Html<>				<col><c>\<h><v>html_tag<>\</h><v>...<>\<h><v>/html_tag<>\</h><><>
 <col> <>
-<col>Card:<>			<col><c>\<card><v>...<>\<><><>
+<col>Card<>			<col><c>\<card><v>...<>\<><><>
 <col> <>
-<col>Code Box:<>		<col><c>\<cb><v>...<>\<><><>
+<col>Code Box<>		<col><c>\<cb><v>...<>\<><><>
 <col> <>				<col><c>\<codebox><v>...<>\<><><>
 <col> <>
-<col>Table:<>			<col><c>\<table>\<col><v>...<>\<>\<col><v>...<>\<>\<><><>
-<col>			<><col>				<><>
+<col>Table<>			<col><c>\<table>\<col><v>...<>\<>\<col><v>...<>\<>\<><><>
+<col> <>
+<col>Address<>			<col><c>\<address><v>...<>\<><><>
+<col>Coordinates<>		<col><c>\<coordinates><v>...<>\<><><>
+<col>Email<>			<col><c>\<email><v>...<>\<><><>
+<col>Telephone<>		<col><c>\<tel><v>...<>\<><><>
+<col>			<>		<col>				<><>
+
 
 
 # Getting Started
@@ -151,6 +161,15 @@ It can be daunting to create a Stash document knowing how much time it would tak
 <*>Bullet
 Bullet<>
 
+<in>Indented
+Indented<>
+
+<in-2>Indented 2
+Indented 2<>
+
+<in-4>Indented 4
+Indented 4<>
+
 A link: <l>http://www.thinkgo.io<>
 A labeled link: <l http://www.thinkgo.io>ThinkGo<>
 
@@ -189,6 +208,15 @@ This is a <@>tagged word<>
 
 \<*><*>Bullet
 Bullet<>\<>
+
+\<in><in>Indented
+Indented\<><>
+
+\<in-2><in-2>Indented 2
+Indented 2\<><>
+
+\<in-4><in-4>Indented 4
+Indented 4\<><>
 
 A link: \<l><l>http://www.thinkgo.io<>\<>
 A labeled link:\<l http://www.thinkgo.io><l http://www.thinkgo.io>ThinkGo<>\<>
@@ -231,6 +259,15 @@ This is a \<@><@>tagged word<>\<>
 \<bullet><bullet>Bullet
 Bullet<>\<>
 
+\<indent><indent>Indented
+Indented\<><>
+
+\<indent-2><indent-2>Indented 2
+Indented 2\<><>
+
+\<indent-4><indent-4>Indented 4
+Indented 4\<><>
+
 A link: \<link><link>http://www.thinkgo.io<>\<>
 A labeled link:\<link http://www.thinkgo.io><link http://www.thinkgo.io>ThinkGo<>\<>
 
@@ -250,6 +287,22 @@ This is a \<tag><tag>tagged word<>\<>
 \<image "Grand Canyon.jpg"<image "Grand Canyon.jpg">>
 
 
+# Escape
+
+<cb>\\<v>x<><>
+
+Escape with leading backslash.
+
+
+Escaped Backslash (\\):
+
+<cb>\\\\<>
+
+Escaped Greater Than (\<):
+
+<cb>\\\<<>
+
+
 
 # Elements
 
@@ -263,6 +316,25 @@ Elements that span over a section must be terminated with the diamond terimator 
 Example:
 
 <cb>\<code>Terminated with diamond termitator\<><>
+
+
+
+### Address
+
+<cb>\<address><v>...<>\<><>
+
+Identifies an element as an address.
+
+
+Example:
+
+<cb><c>\<address><>123 Apple St.
+Springfield, MA\<><><>
+
+Displays:
+
+<card><address>123 Apple St.
+Springfield, MA<><>
 
 
 
@@ -328,6 +400,25 @@ Displays:
 <cb>This is in a codebox.<>
 @
 @ \<codebox>, \<cb>
+
+
+
+### Coordinates
+
+<cb>\<coordinates><v>coordinates<>\<><>
+
+Coordinates. Links to the location on Google Maps.
+
+
+Example:
+
+<cb>\<coordinates><v>52.2675°N 9.6962°W<>\<><>
+
+Will Display:
+
+<card><coordinates>52.2675°N 9.6962°W<><>
+@
+@ \<coordinates>, co-ordinates, longitute, latitude
 
 
 
@@ -465,6 +556,25 @@ Displays:
 
 
 
+### Email
+
+<cb>\<email><v>name@address.com<>\<><>
+
+Identifies an element as a phone number. Will dial when clicked on a phone.
+
+
+Example:
+
+<cb>\<email><v>name@address.com<>\<><>
+
+Will Display:
+
+<card><email>name@address.com<><>
+@
+@ \<email>, mail
+
+
+
 ### Image
 
 <cb><c>\<image <v>location<>><><>
@@ -489,7 +599,8 @@ Displays:
 
 ### Indent
 
-<cb><c>\<indent><v>...<>\<><><>
+<cb><c>\<indent><v>...<>\<>
+\<in><v>...<>\<><><>
 
 Indents a section.
 
@@ -508,7 +619,8 @@ Displays:
 
 ### Indent - Indent x2
 
-<cb><c>\<indent-half><v>...<>\<><><>
+<cb><c>\<indent-2><v>...<>\<>
+\<in-2><v>...<>\<><><>
 
 Indents a section by 2.
 
@@ -527,7 +639,8 @@ Displays:
 
 ### Indent - Indent x4
 
-<cb><c>\<indent-half><v>...<>\<><><>
+<cb><c>\<indent-4><v>...<>\<>
+\<in-4><v>...<>\<><><>
 
 Indents a section by 4.
 
@@ -738,6 +851,25 @@ Defines words to match in a search but are not in the section.
 
 
 
+### Telephone
+
+<cb>\<tel><v>number<>\<><>
+
+Identifies an element as a phone number. Will dial when clicked on a phone.
+
+
+Example:
+
+<cb>\<tel><v>555-555-555<>\<><>
+
+Will Display:
+
+<card><tel>555-555-555<><>
+@
+@ \<tel>, \<phone>, \<telephone>, phone number
+
+
+
 ### Title / Heading
 
 <cb><c># <v>...<>\<><>
@@ -775,9 +907,9 @@ Short Form:
 
 Example:
 
-<cb>\<l><l><v>https://speedsheet.io/s/stash<><>\<><>
+<cb>\<l><l>https://speedsheet.io/s/stash<>\<><>
 
-<cb>\<link><l><v>https://speedsheet.io/s/stash<><>\<><>
+<cb>\<link><l>https://speedsheet.io/s/stash<>\<><>
 
 <cb>\<link "<v>https://speedsheet.io/s/stash<>"><l "https://speedsheet.io/s/stash"><v>Stash SpeedSheet<><>\<><>
 @
