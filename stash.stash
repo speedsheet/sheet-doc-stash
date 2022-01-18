@@ -1203,7 +1203,7 @@ This defines the searchable unit in a stash document. Stash will index each sect
 #### Tag
 A searchable term.
 
-It is defined as the words between the '<@>' and '<> elements. This tells stash to always include these words as searchable.
+It is defined as the words between the '\<@>' and '\<>' elements. This tells stash to always include these words as searchable.
 
 
 
