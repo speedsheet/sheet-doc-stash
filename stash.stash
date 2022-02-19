@@ -21,7 +21,8 @@ Covers the format syntax for Stash documents (the underlying document for all Sp
 <col> <>
 <col>Small<>			<col> <>						<col><c>\<small><v>...<>\<><><>
 <col>Subscript<>		<col><c>\<sub><v>...<>\<><><>	<col><c>\<subscript><v>...<>\<><><>
-<col>Superscript<>		<col><c>\<super><v>...<>\<><><>	<col><c>\<superscript><v>...<>\<><><>
+<col>Superscript<>		<col><c>\<^><v>...<>\<><><>		<col><c>\<superscript><v>...<>\<><><>
+<col> <>
 <col>Comment<>			<col><c>\<#><v>...<>\<><><>		<col><c>\<comment><v>...<>\<><><>
 <col>Code<>				<col><c>\<c><v>...<>\<><><>		<col><c>\<code><v>...<>\<><><>
 <col>Important<>		<col><c>\<!><v>...<>\<><><>		<col><c>\<important><v>...<>\<><><>
@@ -150,7 +151,7 @@ It can be daunting to create a Stash document knowing how much time it would tak
 
 <small>Small<>
 <sub>Subscript<>
-<super>Superscript<>
+<^>Superscript<>
 
 <#>Comment<>
 <!>Important<>
@@ -197,8 +198,8 @@ This is a <@>tagged word<>
 \<_><_>Underline<>\<>
 
 \<small><small>Small<>\<>
-\<sub><sub>Subscript<>\<>
-\<super><super>Superscript<>\<>
+\<sub><^>Subscript<>\<>
+\<^><super>Superscript<>\<>
 
 \<#><#>Comment<>\<>
 \<!><!>Important<>\<>
@@ -520,13 +521,14 @@ Displays:
 
 ### Font - Superscript
 
-<cb>\<super><v>...<>\<>
+<cb>\<^><v>...<>\<>
+\<super><v>...<>\<>
 \<superscript><v>...<>\<><>
 
 
 Example:
 
-<cb>With \<super>Superscript\<> Style<>
+<cb>With \<^>Superscript\<> Style<>
 
 Displays:
 
