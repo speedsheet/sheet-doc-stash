@@ -6,6 +6,7 @@ Covers the format syntax for Stash documents (the underlying document for all Sp
 
 # Text Markup Summary
 
+
 <table><col>Escape<>	<col><c>\\<><><col><>
 <col> <>				<col><c>\\<v>x<><><>
 <col> <>
@@ -21,7 +22,7 @@ Covers the format syntax for Stash documents (the underlying document for all Sp
 <col> <>
 <col>Small<>			<col> <>						<col><c>\<small><v>...<>\<><><>
 <col>Subscript<>		<col><c>\<sub><v>...<>\<><><>	<col><c>\<subscript><v>...<>\<><><>
-<col>Superscript<>		<col><c>\<^><v>...<>\<><><>		<col><c>\<superscript><v>...<>\<><><>
+<col>Superscript<>		<col><c>\<super><v>...<>\<><><>		<col><c>\<superscript><v>...<>\<><><>
 <col> <>
 <col>Comment<>			<col><c>\<#><v>...<>\<><><>		<col><c>\<comment><v>...<>\<><><>
 <col>Code<>				<col><c>\<c><v>...<>\<><><>		<col><c>\<code><v>...<>\<><><>
@@ -198,8 +199,8 @@ This is a <@>tagged word<>
 \<_><_>Underline<>\<>
 
 \<small><small>Small<>\<>
-\<sub><^>Subscript<>\<>
-\<^><super>Superscript<>\<>
+\<sub><sub>Subscript<>\<>
+\<super><super>Superscript<>\<>
 
 \<#><#>Comment<>\<>
 \<!><!>Important<>\<>
@@ -542,6 +543,7 @@ Displays:
 ### Font - Underline
 
 <cb>\<_><v>...<>\<>
+\<u><v>...<>\<>
 \<underline><v>...<>\<><>
 
 
@@ -920,6 +922,17 @@ Example:
 
 
 
+# White Space
+
+White space characters are preserved. 
+
+Stash documents honor white space characters and newlines.
+
+
+<image "White Space is White Space.png">
+
+
+
 # How To
 
 
@@ -979,6 +992,72 @@ For a section named 'add a tag', add tag words 'create', 'insert'
 <c>\<tag><tag><v>Tagged Word<><>\<><>
 
 @ Create, Add
+
+
+
+# Stash Format
+
+
+### Stash Format - Philosophy
+
+Requirements:
+
+<*>Simple Things Should Be Simple
+Complex Things Should Be Possible<>
+
+<*>Must Be Straight Forward
+Must Be Consistent
+Must Be Extensible
+Must Preserve White Space<>
+
+
+
+### Stash Format - Why?
+
+I set out with some specific goals for the document format I needed (laid out in the philosophy section above). I was hoping to find something that met all my needs. The last thing I wanted to do was reinvent the wheel. But every format had major drawbacks. Nothing fit the bill. So with a need to just get on with it, I created a new format that met my goals.
+
+<b>Markdown:<>
+
+It is hugely popular but its limitations do not feel like the future of documentation to me.
+
+I really hoped to make markdown work. It is a relatively simple format to work with, easy to read and is commonly used across the web. Very basic formatting is great, just wrap with whatever format symbols and you are done. But I immediately ran into problems. The moment you want to do anything more complicated, the format has to strain with some bizarre syntax to make it happen. Add a lack of standards, a hit or miss approach to handling white space and no default way to extend the format, and it was done.
+
+<b>MyST / reStructuredText:<>
+
+These use Markdown as the basis and aim to overcome its shortcomings with extensible directives and roles. But the directive syntax is just to complicated, they have the same white space problem Markdown has, and there are some quirky restrictions.
+
+<in-2>MyST Directive:
+
+<cb>.. <v>directive<>::
+    :<v>key_1<>: <v>value_1<>
+    :<v>key_2<>: <v>value_2<>
+
+    <v>directive body<><>
+
+reStructuredText:
+
+<cb>.. <v>directive<>::
+    <v>directive body<><><>
+
+<b>HTML:<>
+This was a non starter. HTML is far too verbose and takes too much effort to create a basic document. It doesn't preserve white space by default and extending it requires the use of <c>\<block><> and <c>\<span><> tags along with some css. Nope.
+
+On the other hand, HTML has some great ideas. The <c>\<<> and <c>><> turn out to be the best way to mark up text while leaving the main content readable (I tried every combination of symbols and styles). And the idea of tags with properties is a straight forward and obvious way of setting parameters (<c>\<<v>tag<> <v>param<>=<v>value<>><>).
+
+<b>RTF:<>
+
+I looked at it. It is the format I use for personal documents. But there is no way you create a document by hand. So out.
+
+<b>XML Based Document Formats:<>
+
+The strict adherence to the XML document structure makes these documents way to verbose. Again white space is an issue too. So no.
+
+<b>Get On With It:<>
+
+I had an app to create and ideas to test. At some point I had to just get on with it. So I took everything I saw, made some assumptions, tested a bunch of different formats, picked the best one and then got to work.
+
+
+- Tim O'
 
 
 
@@ -1299,6 +1378,82 @@ Write the stash headings to a text file.
 <col><c>yellowgreen<><><col><c>#9ACD32<><><col><yellowgreen>●<><><>
 @
 @ color types, names, table, chart, colors, colours
+
+
+
+# Reference - Sublime Syntax Highlighing
+
+Create Files:
+
+<cb>stash.sublime-syntax
+stash.sublime-color-scheme
+stash.sublime-settings<>
+
+
+
+### Sublime Syntax Highlighing - stash.sublime-syntax
+
+<cb>%YAML 1.2
+---
+name: Stash
+file_extensions: stash
+scope: source.stash
+
+contexts:
+
+  main:
+    - include: escapes
+    - include: tags
+    - include: end_tags
+
+  escapes:
+    - match: '\\.'
+      scope: escape.source.stash
+
+  tags:
+    - match: '\<[^>]*\>'
+      scope: tag.source.stash
+
+  end_tags:
+    - match: '\<[/]?\>'
+      scope: end_tag.source.stash
+<>
+
+
+
+### Sublime Syntax Highlighing - stash.sublime-color-scheme
+
+<cb>// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+    "rules": [
+        {   "class": "stash",
+            "foreground": "white"
+        },
+        {
+            "scope": "escape.source.stash",
+            "foreground": "#E6D86F",
+        },
+        {
+            "scope": "tag.source.stash",
+            "foreground": "#FF0070",
+        },
+        {
+            "scope": "end_tags.source.stash",
+            "foreground": "#FF0070",
+        }
+    ]
+}<>
+
+
+
+### Sublime Syntax Highlighing - stash.sublime-settings
+
+<cb>{
+    "extensions":
+    [
+        "stash"
+    ]
+}<>
 
 
 
