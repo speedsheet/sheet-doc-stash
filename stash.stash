@@ -1,4 +1,5 @@
 # <#>Stash Document<> SpeedSheet
+
 <b>What you need, faster.<>
 
 Covers the format syntax for Stash documents (the underlying document for all SpeedSheets).
@@ -30,21 +31,26 @@ Covers the format syntax for Stash documents (the underlying document for all Sp
 <col>Mark<>				<col><c>\<m><v>...<>\<><><>		<col><c>\<mark><v>...<>\<><><>
 <col>Variable<>			<col><c>\<v><v>...<>\<><><>		<col><c>\<variable><v>...<>\<><><>
 <col> <>
-<col>Text Color<>		<col> <>						<col><c>\<<v>color_name<>><v>...<>\<><><>
+<col>Badge<>			<col> <>						<col><c>\<badge <v>color<>><v>...<>\<><><>
+<col> <>
+<col>Background Color<>	<col><c>\<on <v>color<>><v>...<>\<><><>		<col><c>\<background <v>color<>><v>...<>\<><><>
+<col>Foreground Color<>	<col> <>									<col><c>\<<v>color_name<>><v>...<>\<><><>
 <col> <>
 <col>Bullets<>			<col><c>\<*><v>...<>\<><><>		<col><c>\<bullet><v>...<>\<><><>
 <col> <>
-<col>Indent<>			<col><c>\<in><v>...<>\<><><>		<col><c>\<indent><v>...<>\<><><>
-<col>Indent 2<>			<col><c>\<in-2><v>...<>\<><><>		<col><c>\<indent-2><v>...<>\<><><>
-<col>Indent 4<>			<col><c>\<in-4><v>...<>\<><><>		<col><c>\<indent-4><v>...<>\<><><>
+<col>Indent<>			<col><c>\<in><v>...<>\<><><>	<col><c>\<indent><v>...<>\<><><>
+<col>Indent 2<>			<col><c>\<in-2><v>...<>\<><><>	<col><c>\<indent-2><v>...<>\<><><>
+<col>Indent 4<>			<col><c>\<in-4><v>...<>\<><><>	<col><c>\<indent-4><v>...<>\<><><>
 <col> <>
 <col>Tag<>				<col><c>\<@><v>...<>\<><><>		<col><c>\<tag><v>...<>\<><><>
 <col>Tag Line<>			<col><c>@ <v>...<><><>
 <col> <>
+<col>Internal Link<><col><c>\<l#><v><v>Heading<><>\<><><>		<col><c>\<link#><v><v>Heading<><>\<><><>
+<col> <>
 <col>Link<>				<col><c>\<l><v><v>url<><>\<><><>		<col><c>\<link><v><v>url<><>\<><><>
 <col> <>				<col><c>\<l <v>url<>><v>...<>\<><><>	<col><c>\<link <v>url<>><v>...<>\<><><>
 <col> <>				<col><c>\<l "<v>url<>"><v>...<>\<><><>	<col><c>\<link "<v>url<>"><v>...<>\<><><>
-<col>			<>		<col>				<><col> <><>
+<col>					<><col>				<><>
 <table><col>Image<>		<col><c>\<image <v>image_file_location<>><><>
 <col> <>				<col><c>\<image "<v>image_file_location<>"><><>
 <col> <>
@@ -61,7 +67,7 @@ Covers the format syntax for Stash documents (the underlying document for all Sp
 <col>Coordinates<>		<col><c>\<coordinates><v>...<>\<><><>
 <col>Email<>			<col><c>\<email><v>...<>\<><><>
 <col>Telephone<>		<col><c>\<tel><v>...<>\<><><>
-<col>			<>		<col>				<><>
+<col>					<><col>				<><>
 
 
 
@@ -208,6 +214,8 @@ This is a <@>tagged word<>
 \<c><c>Code<>\<>
 \<m><mark>Marked<>\<>
 
+\<badge><badge>Badge<>\<>
+
 \<*><*>Bullet
 Bullet<>\<>
 
@@ -303,6 +311,8 @@ Escaped Backslash (\\):
 Escaped Greater Than (\<):
 
 <cb>\\\<<>
+@
+@ \\\\
 
 
 
@@ -337,6 +347,8 @@ Displays:
 
 <card><address>123 Apple St.
 Springfield, MA<><>
+@
+@ \<address>
 
 
 
@@ -362,6 +374,8 @@ Displays:
 <cb><bullet>Item 1
 Item 2
 Item 3<><>
+@
+@ \<bullet>, \<*>, *
 
 
 
@@ -401,7 +415,7 @@ Displays:
 
 <cb>This is in a codebox.<>
 @
-@ \<codebox>, \<cb>
+@ \<codebox>, \<cb>, cb, codebox
 
 
 
@@ -441,7 +455,7 @@ Displays:
 <card>In <b>bold<><>
 @
 @ formatting, text
-@ \<bold>, \<b>, \<strong>
+@ \<bold>, \<b>, \<strong>, strong
 
 
 
@@ -497,7 +511,7 @@ Displays:
 <card>With <->Strikethrough<> Style<>
 @
 @ formatting, text, strikethrough
-@ \<->, \<strike>, \<strikethrough>, \<del>
+@ \<->, \<strike>, \<strikethrough>, \<del>, -, del
 
 
 
@@ -556,7 +570,7 @@ Displays:
 <card>With <_>Underline<> Style<>
 @
 @ formatting, text, strikethrough
-@ \<_>, \<u>, \<underline>, \<ins>
+@ \<_>, \<u>, \<underline>, \<ins>, _, ins
 
 
 
@@ -597,7 +611,7 @@ Displays:
 <card>This is the Grand Canyon
 <image "Grand Canyon.jpg"><>
 @
-@ \<image>, \<img>
+@ \<image>, \<img>, img
 
 
 
@@ -617,7 +631,7 @@ Displays:
 
 <cb><indent>This is in a codebox.<><>
 @
-@ \<indent>
+@ \<indent>, \<in>, \<indent-1>, \<in-1>, in, 1
 
 
 
@@ -637,7 +651,7 @@ Displays:
 
 <cb><indent-2>This is in a codebox.<><>
 @
-@ \<indent-2>, 2
+@ \<indent-2>, \<in-2>, indent-2, in-2, 2
 
 
 
@@ -657,7 +671,30 @@ Displays:
 
 <cb><indent-4>This is in a codebox.<><>
 @
-@ \<indent-4>, 4
+@ \<indent-4>, \<in-4>, indent-4, in-4, 4
+
+
+
+### Text Background Color
+
+<cb><c>\<background <v>color<>><v>...<>\<>
+\<on <v>color<>><v>...<>\<><><>
+
+
+Use standard web color names.
+
+
+Web Colors:
+<l>https://en.wikipedia.org/wiki/Web_colors<>
+
+
+Example:
+
+<cb>\<background <v>lightskyblue<>><background lightskyblue>This is a light sky blue background.<>\<><>
+
+<cb>\<on <v>lightskyblue<>><on lightskyblue>This is a light sky blue background.<>\<><>
+@
+@ colour, \<background>, \<on>, on
 
 
 
@@ -666,7 +703,7 @@ Displays:
 <cb><c>\<<v>color<>><v>...<>\<><><>
 
 
-Use standard web color names in lower case.
+Use standard web color names.
 
 
 Web Colors:
@@ -678,6 +715,28 @@ Example:
 <cb>\<blue><blue>This is in blue.<>\<><>
 
 <cb>\<mediumslateblue><mediumslateblue>This is in medium slate blue.<>\<><>
+@
+@ \<color>, colour
+
+
+
+### Text Style - Badge
+
+<cb><c>\<badge <v>color<>><v>...<>\<><><>
+
+
+Use standard web color names.
+
+
+Web Colors:
+<l>https://en.wikipedia.org/wiki/Web_colors<>
+
+
+Example:
+
+<cb>\<badge <v>lightskyblue<>><badge lightskyblue>This is a light sky blue badge.<>\<><>
+@
+@ color, colour, \<badge>
 
 
 
@@ -686,7 +745,7 @@ Example:
 <cb><c>\<code><v>...<>\<><>
 <c>\<c><v>...<>\<><><>
 
-Fomrats text in fixed width format.
+Formats text in fixed width format.
 
 
 Example:
@@ -698,7 +757,7 @@ Displays:
 <card>In <c>code<><>
 @
 @ formatting, fixed width, fixed-width
-@ \<code>, \<c>
+@ \<code>, \<c>, c
 
 
 
@@ -713,14 +772,14 @@ Used primarily in code samples.
 
 Example:
 
-<cb>\<soft>soft\<> Style<>
+<cb>\<#>Comment\<> Style<>
 
 Displays:
 
-<card><soft>soft<> Style<>
+<card><#>Comment<> Style<>
 @
 @ formatting
-@ \<comment>, \<#>
+@ \<comment>, \<#>, #
 
 
 
@@ -734,14 +793,14 @@ Colors text red to make it stand out.
 
 Example:
 
-<cb>\<soft>soft\<> Style<>
+<cb>\<!>Important\<> Style<>
 
 Displays:
 
-<card><soft>soft<> Style<>
+<card><!>Important<> Style<>
 @
 @ formatting
-@ \<important>, \<!>
+@ \<important>, \<!>, !
 
 
 
@@ -759,8 +818,8 @@ Displays:
 
 <card><mark>Mark<> Style<>
 @
-@ formatting, text
-@ \<mark>, \<m>
+@ formatting, text, highlight
+@ \<mark>, \<m>, \<highlight>, \<h>
 
 
 
@@ -801,7 +860,7 @@ Displays:
 <card><v>Variable<> Style<>
 @
 @ formatting
-@ \<variable>, \<v>
+@ \<variable>, \<var>, \<v>
 
 
 
@@ -836,12 +895,45 @@ Displays:
 
 
 
+### Table (Proposed)
+
+<cb>\<table>
+	<v>...<>\<column><v>...<>
+	<v>...<>\<column-block><v>...<>\<>
+	<v>...<>
+\<><>
+
+<cb>\<table>
+	<v>...<>\<|><v>...<>
+	<v>...<>\<||><v>...<>\<>
+	<v>...<>
+\<><>
+
+
+Creates a table with related columns equal in size.
+Rows are implicit. Each row is separated by a newline.
+
+
+Example:
+
+<cb>\<table><v>Column 1.1<>\<|><v>Column 1.2<>
+<v>Column 2.1<>\<|><v>Column 2.2<>\<>
+<>
+
+Displays:
+
+<cb><table><col>Column 1.1<><col>Column 1.2<>
+<col>Column 2.1<><col>Column 2.2<><><>
+@ \<table>, \<row>, \<col>, \<column>, row, column
+
+
+
 ### Tag
 
 <cb><c>\<tag><v>...<>\<><>
 <c>\<@><v>...<>\<><><>
 @
-@ \<tag>, \<@>
+@ \<tag>, \<@>, @
 
 
 
@@ -857,7 +949,8 @@ Defines words to match in a search but are not in the section.
 
 ### Telephone
 
-<cb>\<tel><v>number<>\<><>
+<cb>\<telephone><v>number<>\<>
+\<tel><v>number<>\<><>
 
 Identifies an element as a phone number. Will dial when clicked on a phone.
 
@@ -898,7 +991,7 @@ Long Form:
 
 \<link <v>url<>><v>label<>\<>
 
-\<link "<v>url<>>"<v>label<>\<><>
+\<link "<v>url<>"><v>label<>\<><>
 
 Short Form:
 
@@ -906,7 +999,7 @@ Short Form:
 
 \<l <v>url<>><v>label<>\<>
 
-\<l "<v>url<>>"<v>label<>\<><>
+\<l "<v>url<>"><v>label<>\<><>
 
 
 Example:
@@ -919,6 +1012,27 @@ Example:
 @
 @ Create, Web, Links, URLs
 @ \<link>, \<l>
+
+
+
+### Url Internal Link
+
+<cb>\<link#><v>heading<>\<>
+
+\<l#><v>heading<>\<><>
+
+
+Links to a heading somewhere in the sheet.
+
+
+Example:
+
+<cb>\<l#><l#>Tg18<>\<> ('Escape' Section)<>
+
+<cb>\<link#><link#>Tg18<>\<> ('Escape' Section)<>
+@
+@ Create, links, to headings, link hash, linkhash, anchor
+@ \<link#>, \<l#>, link#, l#
 
 
 
@@ -1006,6 +1120,7 @@ Requirements:
 Complex Things Should Be Possible<>
 
 <*>Must Be Straight Forward
+Must Be Concise
 Must Be Consistent
 Must Be Extensible
 Must Preserve White Space<>
@@ -1016,13 +1131,27 @@ Must Preserve White Space<>
 
 I set out with some specific goals for the document format I needed (laid out in the philosophy section above). I was hoping to find something that met all my needs. The last thing I wanted to do was reinvent the wheel. But every format had major drawbacks. Nothing fit the bill. So with a need to just get on with it, I created a new format that met my goals.
 
-<b>Markdown:<>
+<*>Straight Forward Consistent Syntax (Mostly)
+Short Form for Speed
+Easy To Extend
+Preserves White Space<>
+
+
+
+#### Why Not Markdown?
 
 It is hugely popular but its limitations do not feel like the future of documentation to me.
 
+<*>Syntax Is To Limited
+Difficult To Extend
+Too Sensitive to White Space
+No Single Standard<>
+
 I really hoped to make markdown work. It is a relatively simple format to work with, easy to read and is commonly used across the web. Very basic formatting is great, just wrap with whatever format symbols and you are done. But I immediately ran into problems. The moment you want to do anything more complicated, the format has to strain with some bizarre syntax to make it happen. Add a lack of standards, a hit or miss approach to handling white space and no default way to extend the format, and it was done.
 
-<b>MyST / reStructuredText:<>
+
+
+#### Why Not MyST / reStructuredText
 
 These use Markdown as the basis and aim to overcome its shortcomings with extensible directives and roles. But the directive syntax is just to complicated, they have the same white space problem Markdown has, and there are some quirky restrictions.
 
@@ -1034,25 +1163,41 @@ These use Markdown as the basis and aim to overcome its shortcomings with extens
 
     <v>directive body<><>
 
-reStructuredText:
+reStructuredText Directive:
 
 <cb>.. <v>directive<>::
     <v>directive body<><><>
 
-<b>HTML:<>
+
+#### Why Not HTML
 This was a non starter. HTML is far too verbose and takes too much effort to create a basic document. It doesn't preserve white space by default and extending it requires the use of <c>\<block><> and <c>\<span><> tags along with some css. Nope.
+
+<*>Too Verbose and Messy
+Doesn't Preserve White Space<>
+
+But:
+
+<*>\< > 👍
+<c>\<<v>tag<> <v>param<>=<v>value<>><> 👍<>
+
 
 On the other hand, HTML has some great ideas. The <c>\<<> and <c>><> turn out to be the best way to mark up text while leaving the main content readable (I tried every combination of symbols and styles). And the idea of tags with properties is a straight forward and obvious way of setting parameters (<c>\<<v>tag<> <v>param<>=<v>value<>><>).
 
-<b>RTF:<>
+
+
+#### Why Not RTF
 
 I looked at it. It is the format I use for personal documents. But there is no way you create a document by hand. So out.
 
-<b>XML Based Document Formats:<>
+
+
+#### Why Not XML Based Document Formats
 
 The strict adherence to the XML document structure makes these documents way to verbose. Again white space is an issue too. So no.
 
-<b>Get On With It:<>
+
+
+#### Get On With It
 
 I had an app to create and ideas to test. At some point I had to just get on with it. So I took everything I saw, made some assumptions, tested a bunch of different formats, picked the best one and then got to work.
 
