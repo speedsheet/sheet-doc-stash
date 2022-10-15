@@ -1,11 +1,67 @@
 # <#>Stash Document<> SpeedSheet
+<b>Find it faster.<>
 
-<b>What you need, faster.<>
+This is an interactive <b>Stash<> cheat sheet. Stash is a lightweight markup language for formatting text documents. It is the format used to generate all SpeedSheets. Use the search to instantly get answers.
 
-Covers the format syntax for Stash documents (the underlying document for all SpeedSheets).
+
+<table><col><b>Basics<>
+
+<*><l "?q=getting+Started">Getting Started<>
+<l "?q=hello+world">Hello World<><>
+
+<*><l "?q=text+markup+summary">Markup Summary<>
+<l "?q=format+Basics">Format Summary<>
+<l "?q=white+space">White Space<><>
+
+<*><l "?q=how-to">How To<><>
+
+<b>Tools<>
+
+<*><l "?q=reference+sublime+syntax">Sublime Syntax Highlighting<><>
+
+<b>Stash App<>
+
+<*><l "?q=stash+app">App<>
+<l "?q=stash+app+shortcuts">App Shortcuts<>
+<l "?q=stash+app+commands">App Commands<><>
+
+<b>Reference<>
+
+<*><l "?q=stash+format+philosophy">Philosophy<><>
+
+<*><l "?q=reference+color+names">Color Names<>
+<l "?q=terms">Terms<><><><col>	<><col><b>Syntax<>
+
+<*><l "?q=escape-only">Escape<>
+<l "?q=terminator+syntax-only">Terminator<><>
+
+<*><l "?q=code+syntax-only">Code<>
+<l "?q=font+syntax-only">Text Formats<>
+<l "?q=heading-only+syntax-only">Heading<>
+<l "?q=image+syntax-only">Image<>
+<l "?q=indent+syntax-only">Indent<>
+<l "?q=table+syntax-only">Table<>
+<l "?q=text+style+syntax-only">Text Styles<><>
+
+<b>Symantic Tags<>
+
+<*><l "?q=symantic+syntax-only">Symantic Tags<><>
+
+<*><l "?q=address+syntax-only">Address<>
+<l "?q=code+syntax-only">Code<>
+<l "?q=code-box+syntax-only">Code Box<>
+<l "?q=coordinates+syntax-only">Coordinates<>
+<l "?q=email+syntax-only">Email<>
+<l "?q=telephone+syntax-only">Telephone<><>
+
+<b>Related Sheets<>
+
+<*><l "speedsheet_guidelines">SpeedSheet Guidelines<><><><>
 
 
 # Text Markup Summary
+@
+@ syntax-summary-only, markup-summary-only
 
 
 <table><col>Escape<>	<col><c>\\<><><col><>
@@ -145,6 +201,7 @@ It can be daunting to create a Stash document knowing how much time it would tak
 # File Format - Basics
 @
 @ sample format, examples
+@ summary, format-summary-only
 
 
 
@@ -313,11 +370,13 @@ Escaped Greater Than (\<):
 <cb>\\\<<>
 @
 @ \\\\
+@ escape-only, escapes-only
 
 
 
 # Elements
-
+@
+@ syntax-only, elements-only
 
 
 ### Diamond Terminator \<>
@@ -348,7 +407,7 @@ Displays:
 <card><address>123 Apple St.
 Springfield, MA<><>
 @
-@ \<address>
+@ \<address>, symantic
 
 
 
@@ -415,7 +474,7 @@ Displays:
 
 <cb>This is in a codebox.<>
 @
-@ \<codebox>, \<cb>, cb, codebox
+@ \<codebox>, \<cb>, cb, codebox, symantic, code-box
 
 
 
@@ -434,7 +493,7 @@ Will Display:
 
 <card><coordinates>52.2675°N 9.6962°W<><>
 @
-@ \<coordinates>, co-ordinates, longitute, latitude
+@ \<coordinates>, co-ordinates, longitute, latitude, symantic
 
 
 
@@ -589,7 +648,7 @@ Will Display:
 
 <card><email>name@address.com<><>
 @
-@ \<email>, mail
+@ \<email>, mail, symantic
 
 
 
@@ -756,7 +815,7 @@ Displays:
 
 <card>In <c>code<><>
 @
-@ formatting, fixed width, fixed-width
+@ formatting, fixed width, fixed-width, symantic
 @ \<code>, \<c>, c
 
 
@@ -963,7 +1022,7 @@ Will Display:
 
 <card><tel>555-555-555<><>
 @
-@ \<tel>, \<phone>, \<telephone>, phone number
+@ \<tel>, \<phone>, \<telephone>, phone number, symantic
 
 
 
@@ -979,7 +1038,7 @@ Defines a section and the header for that section.
 Headings are hierarcical.
 The number of <c>#<> indicates the heading level in the hierarchy.
 @
-@ #, ######
+@ #, ######, heading-only, title-only
 
 
 
@@ -1048,7 +1107,8 @@ Stash documents honor white space characters and newlines.
 
 
 # How To
-
+@
+@ how-to
 
 
 ### Add Custom Html
@@ -1109,7 +1169,9 @@ For a section named 'add a tag', add tag words 'create', 'insert'
 
 
 
-# Stash Format
+# Stash Format and Philosophy
+@
+@ philosophy
 
 
 ### Stash Format - Philosophy
@@ -1124,6 +1186,8 @@ Must Be Concise
 Must Be Consistent
 Must Be Extensible
 Must Preserve White Space<>
+@
+@ philosophy-only
 
 
 
@@ -1131,10 +1195,15 @@ Must Preserve White Space<>
 
 I set out with some specific goals for the document format I needed (laid out in the philosophy section above). I was hoping to find something that met all my needs. The last thing I wanted to do was reinvent the wheel. But every format had major drawbacks. Nothing fit the bill. So with a need to just get on with it, I created a new format that met my goals.
 
-<*>Straight Forward Consistent Syntax (Mostly)
+<*>Straight Forward Consistent Syntax 
 Short Form for Speed
 Easy To Extend
+Avoid Quirky Syntax (As Much As Possible)
 Preserves White Space<>
+
+<*>Easy To Type (For Humans)
+Easy To Generate / Parse (For Computers)
+Easy To Understand<>
 
 
 
