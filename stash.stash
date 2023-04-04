@@ -207,6 +207,7 @@ It can be daunting to create a Stash document knowing how much time it would tak
 
 ### Basics
 
+Normal
 <b>Bold<>
 <i>Italic<>
 <s>Soft<>
@@ -253,105 +254,108 @@ This is a <@>tagged word<>
 
 
 
-### ### Basics With Markup Visible
+### <lightgray>###<> Basics With Markup Visible
 
-\<b><b>Bold<>\<>
-\<i><i>Italic<>\<>
-\<s><s>Soft<>\<>
-\<-><->Strikethrough<>\<>
-\<_><_>Underline<>\<>
+Normal
+<lightgray>\<b><><b>Bold<><lightgray>\<><>
+<lightgray>\<i><><i>Italic<><lightgray>\<><>
+<lightgray>\<s><><s>Soft<><lightgray>\<><>
+<lightgray>\<-><><->Strikethrough<><lightgray>\<><>
+<lightgray>\<_><><_>Underline<><lightgray>\<><>
 
-\<small><small>Small<>\<>
-\<sub><sub>Subscript<>\<>
-\<super><super>Superscript<>\<>
+<lightgray>\<small><><small>Small<><lightgray>\<><><>
+<lightgray>\<sub><><sub>Subscript<><lightgray>\<><><>
+<lightgray>\<super><><super>Superscript<><lightgray>\<><><>
 
-\<#><#>Comment<>\<>
-\<!><!>Important<>\<>
-\<v><v>Variable<>\<>
-\<c><c>Code<>\<>
-\<m><mark>Marked<>\<>
+<lightgray>\<#><><#>Comment<><lightgray>\<><><>
+<lightgray>\<!><><!>Important<><lightgray>\<><><>
+<lightgray>\<v><><v>Variable<><lightgray>\<><><>
+<lightgray>\<c><><c>Code<><lightgray>\<><><>
+<lightgray>\<m><><mark>Marked<><lightgray>\<><><>
 
-\<badge><badge>Badge<>\<>
+<lightgray>\<badge><><badge>Badge<><lightgray>\<><>
 
-\<*><*>Bullet
-Bullet<>\<>
+<lightgray>\<*><><*>Bullet
+Bullet<><lightgray>\<><>
 
-\<in><in>Indented
-Indented\<><>
+<lightgray>\<in><><in>Indented
+Indented<lightgray>\<><><>
 
-\<in-2><in-2>Indented 2
-Indented 2\<><>
+<lightgray>\<in-2><><in-2>Indented 2
+Indented 2<lightgray>\<><><>
 
-\<in-4><in-4>Indented 4
-Indented 4\<><>
+<lightgray>\<in-4><><in-4>Indented 4
+Indented 4<lightgray>\<><><>
 
-A link: \<l><l>http://www.thinkgo.io<>\<>
-A labeled link:\<l http://www.thinkgo.io><l http://www.thinkgo.io>ThinkGo<>\<>
+A link: <lightgray>\<l><><l>http://www.thinkgo.io<><lightgray>\<><>
+A labeled link:<lightgray>\<l http://www.thinkgo.io><><l http://www.thinkgo.io>ThinkGo<><lightgray>\<><>
 
-\<card><card>Card<>
-\<>
+<lightgray>\<card><><card>Card<>
+<lightgray>\<><>
 
-\<cb><cb>Code Box<>
-\<>
+<lightgray>\<cb><><cb>Code Box<>
+<lightgray>\<><>
 
-\<table><table><col>\<col>Table Column 1\<><><col>\<col>Table Column 2\<><>
-<col>\<col>Column 1\<><><col>\<col>Column 2\<>\<><><>
+<lightgray>\<table><><table><col><lightgray>\<col><>Table Column 1<lightgray>\<><><><col><lightgray>\<col><>Table Column 2<lightgray>\<><><>
+<col><lightgray>\<col><>Column 1<lightgray>\<><><><col><lightgray>\<col><>Column 2<lightgray>\<><><lightgray>\<><><><>
 
-This is a \<@><@>tagged word<>\<>
+This is a <lightgray>\<@><><@>tagged word<><lightgray>\<><>
 
-@ @ This is a tagged line.
+@ <lightgray>@<> This is a tagged line.
 
-\<image "Grand Canyon.jpg"<image "Grand Canyon.jpg">>
+<lightgray>\<image "Grand Canyon.jpg"<><image "Grand Canyon.jpg"><lightgray>><>
 
 
 
-### ### Basics With Long Form Markup Visible
+### <lightgray>###<> Basics With Long Form Markup Visible
 
-\<bold><bold>Bold<>\<>
-\<italic><italic>Italic<>\<>
-\<soft><soft>Soft<>\<>
-\<strike><strike>Strikethrough<>\<>
-\<underline><underline>Underline<>\<>
+Normal
+<lightgray>\<bold><><bold>Bold<><lightgray>\<><>
+<lightgray>\<italic><><italic>Italic<><lightgray>\<><>
+<lightgray>\<soft><><soft>Soft<><lightgray>\<><>
+<lightgray>\<strike><><strike>Strikethrough<><lightgray>\<><>
+<lightgray>\<underline><><underline>Underline<><lightgray>\<><>
 
-\<small><small>In Small<>\<>
-\<subscript><subscript>In Subscript<>\<>
-\<superscript><superscript>In Superscript<>\<>
+<lightgray>\<small><><small>In Small<><lightgray>\<><>
+<lightgray>\<subscript><><subscript>In Subscript<><lightgray>\<><>
+<lightgray>\<superscript><><superscript>In Superscript<><lightgray>\<><>
 
-\<comment><comment>Comment<>\<>
-\<important><important>Important<>\<>
-\<variable><variable>Variable<>\<>
-\<code><code>Code<>\<>
-\<mark><mark>Marked<>\<>
+<lightgray>\<comment><><comment>Comment<><lightgray>\<><>
+<lightgray>\<important><><important>Important<><lightgray>\<><>
+<lightgray>\<variable><><variable>Variable<><lightgray>\<><>
+<lightgray>\<code><><code>Code<><lightgray>\<><>
+<lightgray>\<mark><><mark>Marked<><lightgray>\<><>
 
-\<bullet><bullet>Bullet
-Bullet<>\<>
+<lightgray>\<bullet><><bullet>Bullet
+Bullet<><lightgray>\<><>
 
-\<indent><indent>Indented
-Indented\<><>
+<lightgray>\<indent><><indent>Indented
+Indented<lightgray>\<><><>
 
-\<indent-2><indent-2>Indented 2
-Indented 2\<><>
+<lightgray>\<indent-2><><indent-2>Indented 2
+Indented 2<lightgray>\<><><>
 
-\<indent-4><indent-4>Indented 4
-Indented 4\<><>
+<lightgray>\<indent-4><><indent-4>Indented 4
+Indented 4<lightgray>\<><><>
 
-A link: \<link><link>http://www.thinkgo.io<>\<>
-A labeled link:\<link http://www.thinkgo.io><link http://www.thinkgo.io>ThinkGo<>\<>
+A link: <lightgray>\<link><><link>http://www.thinkgo.io<><lightgray>\<><>
+A labeled link:<lightgray>\<link http://www.thinkgo.io><><link http://www.thinkgo.io>ThinkGo<><lightgray>\<><>
 
-\<card><card>Card<>
-\<>
+<lightgray>\<card><><card>Card<>
+<lightgray>\<><>
 
-\<codebox><codebox>Code Box<>
-\<>
+<lightgray>\<codebox><><codebox>Code Box<>
+<lightgray>\<><>
 
-\<table><table><column>\<column>Table Column 1\<><><column>\<column>Table Column 2\<><>
-<column>\<column>Column 1\<><><column>\<column>Column 2\<>\<><><>
+<lightgray>\<table><><table><column><lightgray>\<column><>Table Column 1<lightgray>\<><><><column><lightgray>\<column><>Table Column 2<lightgray>\<><><>
+<column><lightgray>\<column><>Column 1<lightgray>\<><><><column><lightgray>\<column><>Column 2<lightgray>\<><><lightgray>\<><><><>
 
-This is a \<tag><tag>tagged word<>\<>
+This is a <lightgray>\<tag><><tag>tagged word<><lightgray>\<><>
 
-@ @ This is a tagged line.
+@ <lightgray>@<> This is a tagged line.
 
-\<image "Grand Canyon.jpg"<image "Grand Canyon.jpg">>
+<lightgray>\<image "Grand Canyon.jpg"<><image "Grand Canyon.jpg"><lightgray>><>
+
 
 
 # Escape
